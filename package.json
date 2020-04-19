@@ -1,0 +1,42 @@
+{
+  "name": "dorajs-sakura-anime",
+  "displayName": "樱花动漫",
+  "version": "1.0.0",
+  "uuid": "f4c1c0ef-367d-4878-a929-7c61d9bb9f5d",
+  "description": "🌸樱花动漫的 Dora.js 扩展程序",
+  "icon": "assets/icon.svg",
+  "prefs": "assets/prefs.json",
+  "main": "main.js",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "toubutu",
+    "email": "liuwenkiii@gmail.com"
+  },
+  "engineStrick": true,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "donates": {
+    "wechat": "assets/wechat.png",
+    "alipay": "assets/alipay.jpg"
+  },
+  "updates": "",
+  "contributes": {
+    "search": "search"
+  },
+  "homepage": "",
+  "engines": {
+    "dora": ">=1.7.0"
+  },
+  "keywords": [
+    "Dora.js"
+  ],
+  "categories": [
+    "video"
+  ],
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "iconv-lite": "^0.5.1"
+  }
+}
