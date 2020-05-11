@@ -45,7 +45,7 @@ async function getUrl($, id, episode) {
       url = 'https://saas.jialingmm.net/code.php?type=' + f[2] + '&vid=' + f[1] + '&userlink=' + 'http://www.imomoe.in/player/' + id + '-0-' + episode + '.html' + '&adress=' + adr;
     }
   };
-  console.log(url)
+  //console.log(url)
 
   let response = await $http.get(url, {
     responseType: 'arraybuffer'
@@ -83,7 +83,7 @@ async function getUrl($, id, episode) {
       if (video == "undefined" || video == null || video == "") {
         video = m3;
       }
-      console.log(video);
+      //console.log(video);
       return video
     }
   } catch (e) {
@@ -93,9 +93,9 @@ async function getUrl($, id, episode) {
   if (tvInfoJsUrl == undefined) {
     try {
       let scripts = $1('script')
-      console.log($1(scripts[2]).html())
+      //console.log($1(scripts[2]).html())
       let video = $1(scripts[2]).html().split(';')[0].split('=')[1].replace('\'', '').replace('\'', '')
-      console.log(video)
+      //console.log(video)
       return video
     } catch (e) {
       console.log(e)
@@ -110,6 +110,7 @@ module.exports = {
     this.title = '第' + (args.episode + 1) + '话'
     let id = args.id
     let episode = args.episode
+
     let response = await $http.get('http://www.imomoe.in/player/' + id + '-0-' + episode + '.html', {
       responseType: 'arraybuffer'
     })
@@ -124,14 +125,11 @@ module.exports = {
       $storage.put('lastPlayTitle', args.title)
       $storage.put('lastPlayEpisode', episode)
       $storage.put('lastPlayId', id)
+
+      $storage.put(args.title + '-' + id, episode)
   
       return {
-        url: {
-          value: url,
-          headers: {
-  
-          }
-        }
+        url: url
       }
     }
   }

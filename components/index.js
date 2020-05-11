@@ -26,7 +26,6 @@ module.exports = {
       image: $icon('schedule')
     }
 
-
     return [browse, timetable]
 
     /*
