@@ -1,10 +1,10 @@
 {
   "name": "dorajs-sakura-anime",
   "displayName": "樱花动漫",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "uuid": "f4c1c0ef-367d-4878-a929-7c61d9bb9f5d",
-  "description": "🌸樱花动漫的 Dora.js 扩展程序",
-  "icon": "assets/icon.svg",
+  "description": "🌸樱花动漫的 Dora.js 扩展程序，感谢 @Tartarus 提供图标！",
+  "icon": "assets/icon.png",
   "prefs": "assets/prefs.json",
   "main": "main.js",
   "license": "UNLICENSED",
