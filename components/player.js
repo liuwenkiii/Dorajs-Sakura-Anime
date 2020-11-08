@@ -87,7 +87,7 @@ async function getUrl($, id, episode) {
       return video
     }
   } catch (e) {
-    console.log(e)
+    console.warn(e)
   }
 
   if (tvInfoJsUrl == undefined) {
@@ -98,7 +98,15 @@ async function getUrl($, id, episode) {
       //console.log(video)
       return video
     } catch (e) {
-      console.log(e)
+      console.warn(e)
+    }
+  }
+
+  if (tvInfoJsUrl === undefined) {
+    try {
+      return $1($1('script')[3]).html().split('video =  \'')[1].split('\'')[0]
+    } catch (e) {
+      console.warn(e)
     }
   }
 
